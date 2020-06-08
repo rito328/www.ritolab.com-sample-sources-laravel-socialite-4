@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login/twitter', 'Auth\LoginController@redirectToProvider');
+Route::get('login/twitter/callback', 'Auth\LoginController@handleProviderCallback');
